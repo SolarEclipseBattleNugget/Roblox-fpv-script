@@ -95,16 +95,7 @@ RunService.RenderStepped:Connect(function()
 		target.AssemblyLinearVelocity = Vector3.new(0, -20 + speedM * leftStick.Y, 0)
 	end
 	
---[[	if leftStick.X ~= 0 then
-		target.AssemblyAngularVelocity = Vector3.new(0, -leftStick.X * 10, 0) 
-	end
-	if rightStick.Y ~= 0 then
-		target.AssemblyAngularVelocity = Vector3.new(-rightStick.Y * 10, 0, 0) 
-	end
-	if rightStick.X ~= 0 then
-		target.AssemblyAngularVelocity = Vector3.new(0, 0, -rightStick.X * 10) 
-	end--]]
-	
+
 	if leftStick.X ~= 0  and leftStick.X > 0.4 or leftStick.X < -0.4 then
 		target.CFrame = target.CFrame * CFrame.Angles(0, -leftStick.X / 10, 0) 
 	end
