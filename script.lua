@@ -71,6 +71,10 @@ targetV = target.AssemblyLinearVelocity
 	elseif input.KeyCode == Enum.KeyCode.ButtonL2 then
 		target.Rotation = Vector3.new(0, 0, 0)
 		target.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+	elseif input.KeyCode == Enum.KeyCode.ButtonR2 then
+		Camera.CameraType = Enum.CameraType.Custom
+		
+		script.Parent:Destroy()
 	end	
 end)
 
